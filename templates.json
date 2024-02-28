@@ -14,16 +14,12 @@
 				"81:81/tcp",
 				"443:443/tcp"
 			],
-			"volumes": [
-				{
-					"bind": "/portainer/Files/AppData/Config/nginx-proxy-manager/data",
-					"container": "/data"
-				},
-				{
-					"bind": "/portainer/Files/AppData/Config/nginx-proxy-manager/letsencrypt",
-					"container": "/etc/letsencrypt"
-				}
-			],
+      "volumes": [
+        {
+          "container": "/var/lib/registry"
+        }
+      ]
+    },
     {
       "type": 1,
       "title": "Registry (cache)",
