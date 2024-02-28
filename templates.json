@@ -3,20 +3,27 @@
   "templates": [
     {
       "type": 1,
-      "title": "Registry",
-      "description": "Docker image registry",
-      "categories": ["docker"],
+      "title": "Nginx Proxy Manager",
+      "description": "This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+      "categories": ["network"],
       "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
-      "image": "registry:latest",
-      "ports": ["5000/tcp"],
-      "volumes": [
-        {
-          "container": "/var/lib/registry"
-        }
-      ]
-    },
-###########################################################################################    
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/proxy_mgr.png",
+      "image": "jc21/nginx-proxy-manager:latest",
+			"ports": [
+				"80:80/tcp",
+				"81:81/tcp",
+				"443:443/tcp"
+			],
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/nginx-proxy-manager/data",
+					"container": "/data"
+				},
+				{
+					"bind": "/portainer/Files/AppData/Config/nginx-proxy-manager/letsencrypt",
+					"container": "/etc/letsencrypt"
+				}
+			],
     {
       "type": 1,
       "title": "Registry (cache)",
