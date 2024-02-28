@@ -2566,12 +2566,14 @@
           "name": "MYSQL_ROOT_PASSWORD"
         },
         {
+          "default": "80",
           "label": "PORT",
           "name": "PORT"
         }
       ],
       "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/nextcloud-icon.png",
-      "name": "nextcloudny",
+      "name": "nextcloud",
+      "network": "proxynet",
       "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
       "platform": "linux",
       "repository": {
