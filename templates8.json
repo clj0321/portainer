@@ -9,10 +9,10 @@
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/proxy_mgr.png",
       "image": "jc21/nginx-proxy-manager:latest",
-			"ports": [
-				"80:80/tcp",
-				"81:81/tcp",
-				"443:443/tcp"
+      "ports": [
+      "80:80/tcp",
+      "81:81/tcp",
+      "443:443/tcp"
 			],
 			"volumes": [
 				{
