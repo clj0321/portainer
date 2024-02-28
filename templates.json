@@ -2553,7 +2553,7 @@
           "name": "PGID"
         },
         {
-          "default": "Europe/Copenhagen",
+          "default": "Europe/Berlin",
           "label": "TZ",
           "name": "TZ"
         },
