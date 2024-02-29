@@ -24,6 +24,18 @@
       "bind": "/portainer/Files/AppData/Config/nginx-proxy-manager/letsencrypt",
       "container": "/etc/letsencrypt"
       }
+      ],
+      "env": [
+      {
+      "name": "PUID",
+       "label": "PUID",
+       "default": "1000"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "100"
+      }
       ]
     },
     {
