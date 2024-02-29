@@ -9,6 +9,7 @@
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/proxy_mgr.png",
       "image": "jc21/nginx-proxy-manager:latest",
+      "administrator-only": true
       "ports": [
       "80:80/tcp",
       "81:81/tcp",
@@ -21,9 +22,9 @@
       ],
       "env": [
         {
+          "default": "Nginx Proxy Manager",
           "name": "REGISTRY_PROXY_REMOTEURL",
-          "default": "https://registry-1.docker.io",
-          "preset": true
+          "label": true
         }
       ]
     },
